@@ -4,11 +4,23 @@ body {
     font-size: 3rem;
 }
 
-.luminaries {
-    border: 2px solid #d1d5db;
+.salary-counter {
+    border: 5px solid white;
     border-radius: 12px;
-    padding: 24px;
+    padding: 20px;
     margin: 20px auto;
-    max-width: 600px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+}
+
+.salary-counter legend {
+    padding: 0 10px;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+
+.counter-display {
+    text-align: center;
+    font-size: 50px;
+    margin: 10px 0;
 }

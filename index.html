@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,14 +12,22 @@
         }
     </style>
 </head>
+
 <body>
-    <div class="luminaries">
-        <label class="joshAllen"><strong> Josh Allen </strong></label>
-        <label id="allenCounter"> $0 </label>
-        <br>
-        <label class="timCook"><strong> Tim Cook </strong></label>
-        <label id="cookCounter"> $0 </label>
-    </div>
+    <fieldset class="salary-counter">
+        <legend>Josh Allen</legend>
+        <div class="counter-display">
+            <strong id="allenCounter">$0</strong>
+        </div>
+    </fieldset>
+
+    <fieldset class="salary-counter">
+        <legend>Tim Cook</legend>
+        <div class="counter-display">
+            <strong id="cookCounter">$0</strong>
+        </div>
+    </fieldset>
     <script src="script.js"></script>
 </body>
+
 </html>
