@@ -39,37 +39,65 @@ const celebrities = {
         name: "Logan Paul",
         salary: 8500000,
         elementId: "paulCounter"
+    },
+    bigX: {
+        name: "BigXThaPlug",
+        salary: 1400000,
+        elementId: "xCounter"
     }
 };
 
 // Track start time
 const startTime = Date.now();
 
+// Store interval IDs for cleanup
+const intervalIds = {};
+
 // Create counter for a specific celebrity
 function createCounter(celebrityKey) {
     const celebrity = celebrities[celebrityKey];
     const perSecondRate = celebrity.salary / (365 * 24 * 60 * 60);
     const counterElement = document.getElementById(celebrity.elementId);
-    
+
     function updateCounter() {
         const elapsedSeconds = (Date.now() - startTime) / 1000;
         const currentAmount = elapsedSeconds * perSecondRate;
-        counterElement.textContent = '$' + currentAmount.toLocaleString('en-US', {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2
-    });
+        counterElement.textContent = '$' + currentAmount.toLocaleString(undefined, {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        });
     }
-    
-    setInterval(updateCounter, 100);
+
+    // Clear existing interval if it exists
+    if (intervalIds[celebrityKey]) {
+        clearInterval(intervalIds[celebrityKey]);
+    }
+
+    // Set new interval
+    intervalIds[celebrityKey] = setInterval(updateCounter, 100);
     updateCounter();
 }
 
-// Initialize counters
-createCounter('timCook');
-createCounter('joshAllen');
-createCounter('leoDicap');
-createCounter('yourDoctor');
-createCounter('donaldTrump');
-createCounter('crisRonaldo');
-createCounter('mrBeast');
-createCounter('loganPaul');
+// Initialize all counters
+Object.keys(celebrities).forEach(key => createCounter(key));
+
+// Function to update user's salary
+function updateYourSalary() {
+    const salaryInput = document.getElementById('salaryInput');
+    const newSalary = parseFloat(salaryInput.value) || 0;
+
+    // Ensure the 'you' object exists in celebrities
+    if (!celebrities.you) {
+        celebrities.you = {
+            name: "You",
+            salary: 0,
+            elementId: "youCounter"
+        };
+    }
+
+    // Update the salary in the celebrities object
+    celebrities.you.salary = newSalary;
+
+    // Recreate the counter with the new salary
+    createCounter('you');
+}

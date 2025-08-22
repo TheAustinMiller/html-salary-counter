@@ -16,106 +16,126 @@
 <body>
     <h1>Real Time Pay Counter</h1>
 
-    <div class="you">
-        <fieldset class="salary-counter">
-            <legend>You</legend>
-            <div class="counter-content">
-                <div class="counter-display">
-                    
-                    <strong id="youCounter">$0</strong>
+    <div class="main-container">
+        <div class="you">
+            <fieldset class="salary-counter">
+                <legend>You</legend>
+                <div class="counter-content">
+                    <div class="counter-display">
+                        <strong id="youCounter">$0</strong>
+                    </div>
+                    <div class="salary-input">
+                        <label for="salaryInput">Enter your annual salary:</label>
+                        <div class="input-group">
+                            <span class="dollar-sign">$</span>
+                            <input type="number" id="salaryInput" class="salary-textbox">
+                        </div>
+                        <button class="update-button" onclick="updateYourSalary()">Update</button>
+                    </div>
                 </div>
-            </div>
-        </fieldset>
-    </div>
+            </fieldset>
+        </div>
 
-    <div class="luminaries">
-        <fieldset class="salary-counter">
-            <legend>Your Doctor</legend>
-            <img src="images/doc.jpg" alt="Doctor" class="person-image">
-            <div class="counter-content">
-                <div class="counter-display">
-                    <strong id="doctorCounter">$0</strong>
+        <div class="luminaries">
+            <fieldset class="salary-counter">
+                <legend>Your Doctor</legend>
+                <img src="images/doc.jpg" alt="Doctor" class="person-image">
+                <div class="counter-content">
+                    <div class="counter-display">
+                        <strong id="doctorCounter">$0</strong>
+                    </div>
+                    <label>$239,200/year</label>
                 </div>
-                <label>$239,200/year</label>
-            </div>
-        </fieldset>
+            </fieldset>
 
-        <fieldset class="salary-counter">
-            <legend>Donald Trump</legend>
-            <img src="images/trump.jpg" alt="Tim Cook" class="person-image">
-            <div class="counter-content">
-                <div class="counter-display">
-                    <strong id="trumpCounter">$0</strong>
+            <fieldset class="salary-counter">
+                <legend>Donald Trump</legend>
+                <img src="images/trump.jpg" alt="Donald Trump" class="person-image">
+                <div class="counter-content">
+                    <div class="counter-display">
+                        <strong id="trumpCounter">$0</strong>
+                    </div>
+                    <label>$400,000/year</label>
                 </div>
-                <label>$400,000/year</label>
-            </div>
-        </fieldset>
+            </fieldset>
 
-        <fieldset class="salary-counter">
-            <legend>Logan Paul</legend>
-            <img src="images/log.jpg" alt="Tim Cook" class="person-image">
-            <div class="counter-content">
-                <div class="counter-display">
-                    <strong id="paulCounter">$0</strong>
+            <fieldset class="salary-counter">
+                <legend>BigXThaPlug</legend>
+                <img src="images/x.jpg" alt="BigXThaPlug" class="person-image">
+                <div class="counter-content">
+                    <div class="counter-display">
+                        <strong id="xCounter">$0</strong>
+                    </div>
+                    <label>$1,400,000/year</label>
                 </div>
-                <label>$8,500,000/year</label>
-            </div>
-        </fieldset>
+            </fieldset>
 
-        <fieldset class="salary-counter">
-            <legend>Leonardo DiCaprio</legend>
-            <img src="images/leo.jpg" alt="Leonardo DiCaprio" class="person-image">
-            <div class="counter-content">
-                <div class="counter-display">
-                    <strong id="dicapCounter">$0</strong>
+            <fieldset class="salary-counter">
+                <legend>Logan Paul</legend>
+                <img src="images/log.jpg" alt="Logan Paul" class="person-image">
+                <div class="counter-content">
+                    <div class="counter-display">
+                        <strong id="paulCounter">$0</strong>
+                    </div>
+                    <label>$8,500,000/year</label>
                 </div>
-                <label>$30,000,000/movie</label>
-            </div>
-        </fieldset>
+            </fieldset>
 
-        <fieldset class="salary-counter">
-            <legend>Josh Allen</legend>
-            <img src="images/all.jpg" alt="Josh Allen" class="person-image">
-            <div class="counter-content">
-                <div class="counter-display">
-                    <strong id="allenCounter">$0</strong>
+            <fieldset class="salary-counter">
+                <legend>Leonardo DiCaprio</legend>
+                <img src="images/leo.jpg" alt="Leonardo DiCaprio" class="person-image">
+                <div class="counter-content">
+                    <div class="counter-display">
+                        <strong id="dicapCounter">$0</strong>
+                    </div>
+                    <label>$30,000,000/movie</label>
                 </div>
-                <label>$55,000,000/year</label>
-            </div>
-        </fieldset>
+            </fieldset>
 
-        <fieldset class="salary-counter">
-            <legend>Tim Cook</legend>
-            <img src="images/tim.jpg" alt="Tim Cook" class="person-image">
-            <div class="counter-content">
-                <div class="counter-display">
-                    <strong id="cookCounter">$0</strong>
+            <fieldset class="salary-counter">
+                <legend>Josh Allen</legend>
+                <img src="images/all.jpg" alt="Josh Allen" class="person-image">
+                <div class="counter-content">
+                    <div class="counter-display">
+                        <strong id="allenCounter">$0</strong>
+                    </div>
+                    <label>$55,000,000/year</label>
                 </div>
-                <label>$74,600,000/year</label>
-            </div>
-        </fieldset>
+            </fieldset>
 
-        <fieldset class="salary-counter">
-            <legend>Mr. Beast</legend>
-            <img src="images/beast.jpg" alt="Tim Cook" class="person-image">
-            <div class="counter-content">
-                <div class="counter-display">
-                    <strong id="beastCounter">$0</strong>
+            <fieldset class="salary-counter">
+                <legend>Tim Cook</legend>
+                <img src="images/tim.jpg" alt="Tim Cook" class="person-image">
+                <div class="counter-content">
+                    <div class="counter-display">
+                        <strong id="cookCounter">$0</strong>
+                    </div>
+                    <label>$74,600,000/year</label>
                 </div>
-                <label>$85,000,000/year</label>
-            </div>
-        </fieldset>
+            </fieldset>
 
-        <fieldset class="salary-counter">
-            <legend>Cristiano Ronaldo</legend>
-            <img src="images/ron.jpg" alt="Tim Cook" class="person-image">
-            <div class="counter-content">
-                <div class="counter-display">
-                    <strong id="crisCounter">$0</strong>
+            <fieldset class="salary-counter">
+                <legend>Mr. Beast</legend>
+                <img src="images/beast.jpg" alt="Mr. Beast" class="person-image">
+                <div class="counter-content">
+                    <div class="counter-display">
+                        <strong id="beastCounter">$0</strong>
+                    </div>
+                    <label>$85,000,000/year</label>
                 </div>
-                <label>$260,000,000/year</label>
-            </div>
-        </fieldset>
+            </fieldset>
+
+            <fieldset class="salary-counter">
+                <legend>Cristiano Ronaldo</legend>
+                <img src="images/ron.jpg" alt="Cristiano Ronaldo" class="person-image">
+                <div class="counter-content">
+                    <div class="counter-display">
+                        <strong id="crisCounter">$0</strong>
+                    </div>
+                    <label>$260,000,000/year</label>
+                </div>
+            </fieldset>
+        </div>
     </div>
 
     <script src="script.js"></script>
